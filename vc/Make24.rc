@@ -1,0 +1,267 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Go\tF2",                     ID_FILE_GO
+        MENUITEM SEPARATOR
+        MENUITEM "&Basic",                      ID_FILE_BASIC, CHECKED
+        MENUITEM "&Intermediate",               ID_FILE_INTERMEDIATE
+        MENUITEM "&Advanced",                   ID_FILE_ADVANCED
+        MENUITEM SEPARATOR
+        MENUITEM "&Option...",                  ID_FILE_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAtl+F4",               ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "U&ndo All\tESC",              ID_EDIT_UNDO_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Add All\tCtrl+F7",           ID_EDIT_ADD_ALL
+        MENUITEM "&Multiply All\tCtrl+F8",      ID_EDIT_MULTIPLY_ALL
+        POPUP "&Change Operator"
+        BEGIN
+            MENUITEM "&Add",                        ID_EDIT_ADD
+            MENUITEM "&Subtract",                   ID_EDIT_SUBTRACT
+            MENUITEM "&Multiply",                   ID_EDIT_MULTIPLY
+            MENUITEM "&Divide",                     ID_EDIT_DIVIDE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Give &Hint",                  ID_EDIT_HINT
+        MENUITEM "Show &Key\tF12",              ID_EDIT_KEY
+        MENUITEM "&Skip\tF10",                  ID_EDIT_IGNORE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Content\tF1",                ID_APP_HELP, INACTIVE
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Make24.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F1,          ID_APP_HELP,            VIRTKEY, NOINVERT
+    VK_ADD,         ID_EDIT_ADD,            VIRTKEY, NOINVERT
+    VK_F7,          ID_EDIT_ADD_ALL,        VIRTKEY, CONTROL, NOINVERT
+    VK_DIVIDE,      ID_EDIT_DIVIDE,         VIRTKEY, NOINVERT
+    VK_NEXT,        ID_EDIT_IGNORE,         VIRTKEY, NOINVERT
+    VK_F10,         ID_EDIT_IGNORE,         VIRTKEY, NOINVERT
+    VK_F12,         ID_EDIT_KEY,            VIRTKEY, NOINVERT
+    VK_MULTIPLY,    ID_EDIT_MULTIPLY,       VIRTKEY, NOINVERT
+    VK_F8,          ID_EDIT_MULTIPLY_ALL,   VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_EDIT_SUBTRACT,       VIRTKEY, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      ID_EDIT_UNDO_ALL,       VIRTKEY, NOINVERT
+    VK_F2,          ID_FILE_GO,             VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Mini 24"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Make24"
+            VALUE "LegalCopyright", "Copyright 2006"
+            VALUE "OriginalFilename", "Make24.exe"
+            VALUE "ProductName", "Mini 24"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 187, 80
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Mini 24"
+FONT 9, "Times New Roman", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,69,59,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,15,26,18,17
+    LTEXT           "Mini 24\t1.00beta",IDC_STATIC,50,23,92,8
+    LTEXT           "Developed by 31416@msn.cn",IDC_STATIC,50,36,99,8
+END
+
+IDD_OPTION DIALOGEX 0, 0, 237, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 9, "Times New Roman", 400, 0, 0x0
+BEGIN
+    CONTROL         "Random",IDC_RADIO_KNOWLEDGEWARE_OFF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,23,18,40,10
+    CONTROL         "Intelligent",IDC_RADIO_KNOWLEDGEWARE_ON,"Button",BS_AUTORADIOBUTTON,79,18,60,10
+    GROUPBOX        "Question generation",IDC_STATIC,7,7,164,25,WS_GROUP
+    CONTROL         "A-10(A as 1)",IDC_RADIO_JQK_OFF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,23,48,64,10
+    CONTROL         "A-K(J,Q,K as 11,12,13)",IDC_RADIO_JQK_ON,"Button",BS_AUTORADIOBUTTON,79,48,85,10
+    GROUPBOX        "Cards range",IDC_STATIC,7,37,164,25,WS_GROUP
+    CONTROL         "Manual",IDC_RADIO_SEMIAUTOMATIC_OFF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,23,78,40,10
+    CONTROL         "Automatic",IDC_RADIO_SEMIAUTOMATIC_ON,"Button",BS_AUTORADIOBUTTON,79,78,52,10
+    GROUPBOX        "Last step completion",IDC_STATIC,7,67,164,25,WS_GROUP
+    CONTROL         "Integer only",IDC_RADIO_FRACTIONAL_OFF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,23,108,64,10
+    CONTROL         "Fraction as well",IDC_RADIO_FRACTIONAL_ON,"Button",BS_AUTORADIOBUTTON,79,108,80,10
+    GROUPBOX        "Interim results",IDC_STATIC,7,97,164,25,WS_GROUP
+    LTEXT           "Time out after",IDC_STATIC,31,140,57,8
+    EDITTEXT        IDC_EDIT_TIME,77,137,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Minutes",IDC_STATIC,107,140,29,8
+    GROUPBOX        "Other",IDC_STATIC,7,127,164,25,WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,180,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Mini 24"
+    IDS_ERROR_TIME          "Time can not be 0"
+    IDS_QUERY_QUIT          "Are you going to abort?"
+    IDS_QUERY_PASS          "Congratulate for promotion. Are you going to continue?"
+    IDS_QUERY_TIMEOUT       "Time is out. Play again?"
+    IDS_COPY_RIGHT          "This software is developed by 31416@msn.cn"
+    IDS_APP_TITLE           "Mini 24#Mini 24 V1.00b"
+    IDS_FORMAT_SCORE        "Score: %d Time: %d"
+    IDS_KEY                 "Keys(Press F10 or PageDown to next question):"
+    IDS_HISTORY             "Histories:"
+    IDS_WIZARD              "Select next step:"
+END
+
+#endif    // resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

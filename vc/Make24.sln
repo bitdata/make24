@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Make24", "Make24.vcproj", "{30BA5385-4B6D-48BF-9E0F-CE8A31B386CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Make24En", "Make24En.vcproj", "{50EC3063-FBAC-43B8-811F-DC50FB60383D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30BA5385-4B6D-48BF-9E0F-CE8A31B386CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30BA5385-4B6D-48BF-9E0F-CE8A31B386CB}.Debug|Win32.Build.0 = Debug|Win32
+		{30BA5385-4B6D-48BF-9E0F-CE8A31B386CB}.Release|Win32.ActiveCfg = Release|Win32
+		{30BA5385-4B6D-48BF-9E0F-CE8A31B386CB}.Release|Win32.Build.0 = Release|Win32
+		{50EC3063-FBAC-43B8-811F-DC50FB60383D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{50EC3063-FBAC-43B8-811F-DC50FB60383D}.Debug|Win32.Build.0 = Debug|Win32
+		{50EC3063-FBAC-43B8-811F-DC50FB60383D}.Release|Win32.ActiveCfg = Release|Win32
+		{50EC3063-FBAC-43B8-811F-DC50FB60383D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
