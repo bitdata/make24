@@ -1,4 +1,4 @@
-# Make 24
+# <img src="vc/res/Make24.ico"/> Make 24
 
 [中文文档](README_CN.md)
 
